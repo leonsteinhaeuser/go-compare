@@ -1,5 +1,8 @@
 # go-diff
 
+[![unit-tests](https://github.com/leonsteinhaeuser/go-compare/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/leonsteinhaeuser/go-compare/actions/workflows/unit-tests.yml)
+[![codecov](https://codecov.io/gh/leonsteinhaeuser/go-compare/branch/main/graph/badge.svg?token=AENFLCI9NF)](https://codecov.io/gh/leonsteinhaeuser/go-compare)
+
 A library that can compare data types based on different "match" criterias.
 
 Supported match criterias:
