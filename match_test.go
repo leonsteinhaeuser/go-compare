@@ -408,7 +408,7 @@ func TestValidation_Matches(t *testing.T) {
 		{
 			name: "not equal (string = 'abc')",
 			fields: fields{
-				MatchType:     MatchTypeNotEquals,
+				MatchType:     MatchTypeNotEqual,
 				ExpectedValue: "abc",
 			},
 			args: args{
@@ -420,7 +420,7 @@ func TestValidation_Matches(t *testing.T) {
 		{
 			name: "not equal (string = 'abc1')",
 			fields: fields{
-				MatchType:     MatchTypeNotEquals,
+				MatchType:     MatchTypeNotEqual,
 				ExpectedValue: "abc",
 			},
 			args: args{
@@ -432,7 +432,7 @@ func TestValidation_Matches(t *testing.T) {
 		{
 			name: "not equal (int64 = '10')",
 			fields: fields{
-				MatchType:     MatchTypeNotEquals,
+				MatchType:     MatchTypeNotEqual,
 				ExpectedValue: int64(10),
 			},
 			args: args{
@@ -444,7 +444,7 @@ func TestValidation_Matches(t *testing.T) {
 		{
 			name: "not equal (int64 = '11')",
 			fields: fields{
-				MatchType:     MatchTypeNotEquals,
+				MatchType:     MatchTypeNotEqual,
 				ExpectedValue: int64(10),
 			},
 			args: args{
@@ -456,7 +456,7 @@ func TestValidation_Matches(t *testing.T) {
 		{
 			name: "not equal ([]byte = '{0,1,2,1}')",
 			fields: fields{
-				MatchType:     MatchTypeNotEquals,
+				MatchType:     MatchTypeNotEqual,
 				ExpectedValue: []byte{0, 1, 2, 1},
 			},
 			args: args{
@@ -468,7 +468,7 @@ func TestValidation_Matches(t *testing.T) {
 		{
 			name: "not equal ([]byte = '{0,1,2,1,2}')",
 			fields: fields{
-				MatchType:     MatchTypeNotEquals,
+				MatchType:     MatchTypeNotEqual,
 				ExpectedValue: []byte{0, 1, 2, 1},
 			},
 			args: args{

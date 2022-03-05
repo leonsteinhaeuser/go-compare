@@ -89,7 +89,7 @@ func BenchmarkValidation_Matches_MatchTypeEquals(b *testing.B) {
 func BenchmarkValidation_Matches_MatchTypeNotEquals(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		Validation{
-			MatchType:     MatchTypeNotEquals,
+			MatchType:     MatchTypeNotEqual,
 			ExpectedValue: "abc",
 		}.Matches("abcd")
 	}

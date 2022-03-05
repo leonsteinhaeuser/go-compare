@@ -58,10 +58,10 @@ const (
 	// If the response is equal to the expected value the validation is successful.
 	// If the response is not equal to the expected value the validation is not successful.
 	MatchTypeEqual MatchType = "eq"
-	// MatchTypeNotEquals is used to compare the response with the expected value.
+	// MatchTypeNotEqual is used to compare the response with the expected value.
 	// If the response is not equal to the expected value the validation is successful.
 	// If the response is equal to the expected value the validation is not successful.
-	MatchTypeNotEquals MatchType = "neq"
+	MatchTypeNotEqual MatchType = "neq"
 	// MatchTypeEmpty is used to compare the response with the expected value.
 	// If the response is empty the validation is successful.
 	// If the response is not empty the validation is not successful.
@@ -187,7 +187,7 @@ func (d Validation) Matches(value interface{}) (bool, error) {
 		return val1 >= r[0] && val1 <= r[1], nil
 	case MatchTypeEqual:
 		return reflect.DeepEqual(d.ExpectedValue, value), nil
-	case MatchTypeNotEquals:
+	case MatchTypeNotEqual:
 		return !reflect.DeepEqual(d.ExpectedValue, value), nil
 	case MatchTypeNotEmpty:
 		if str, ok := value.(string); ok {
